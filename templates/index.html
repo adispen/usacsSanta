@@ -8,9 +8,9 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="/static/favicon.ico">
 
-    <title>USACS Secret Santa 2013</title>
+	<title>USACS Secret Santa 2013</title>
 
-    <!-- Bootstrap core CSS -->
+	<!-- Bootstrap core CSS -->
     <link href="/static/dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
@@ -30,7 +30,7 @@
 
     <div class="container">
 
-     <form class="form-signin" role="form" method="post" action="">
+     <form class="form-signin" role="form" method="post" action="/posted">
         <center><h2 class="form-signin-heading">Please enter your name and request.</h2></center>
        <!-- <input type="text" class="form-control" placeholder="Name" required autofocus> 
 	   <input type="text" class="form-control" placeholder="Gift request" required> -->
@@ -39,7 +39,8 @@
 	   {{form.gift(type="text", class_="form-control", placeholder="Gift request", required=true)}}
 	   {{form.email(type="text", class_="form-control", placeholder="Email address", required=true)}}
         <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-	</form> 
+		</form> 	
+
 
     </div> <!-- /container -->
 
