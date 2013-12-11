@@ -3,13 +3,14 @@ from flask import Flask, render_template, flash, request, redirect
 from flask.ext.wtf import Form
 from wtforms.validators import Required
 from wtforms import TextField
+import os
 
 class santaForm(Form):
 	name = TextField('name', validators=[Required()])
 	gift = TextField('gift', validators=[Required()])
 	email = TextField('email', validators=[Required()])
 
-client = MongoClient('localhost', 27017)
+client = MongoClient(os.environ["MONGOHQ"])
 db = client.santa
 app = Flask(__name__)
 app.config.from_pyfile("santa.cfg")
