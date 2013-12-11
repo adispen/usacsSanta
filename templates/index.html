@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="/static/favicon.ico">
-
+	<center><h2 class="form-siginin-heading">USACS Secret Santa 2013</h2></center>
 	<title>USACS Secret Santa 2013</title>
 
 	<!-- Bootstrap core CSS -->
@@ -36,8 +36,8 @@
 	   <input type="text" class="form-control" placeholder="Gift request" required> -->
 	   {{form.hidden_tag()}}
 	   {{form.name(type="text", class_="form-control", placeholder="Name", required=true, autofocus=true)}}
-	   {{form.gift(type="text", class_="form-control", placeholder="Gift request", required=true)}}
 	   {{form.email(type="text", class_="form-control", placeholder="Email address", required=true)}}
+	   {{form.gift(type="text", class_="form-control", placeholder="Gift ideas", required=true)}}
         <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
 		</form> 	
 

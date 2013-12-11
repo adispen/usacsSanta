@@ -2,16 +2,19 @@ from pymongo import MongoClient
 from flask import Flask, render_template, flash, request, redirect
 from flask.ext.wtf import Form
 from wtforms.validators import Required
-from wtforms import TextField
+from wtforms import TextField, TextAreaField
 import os
+import pymongo
 
 class santaForm(Form):
 	name = TextField('name', validators=[Required()])
-	gift = TextField('gift', validators=[Required()])
+	gift = TextAreaField('gift', validators=[Required()])
 	email = TextField('email', validators=[Required()])
 
-client = MongoClient(os.environ["MONGOHQ"])
-db = client.santa
+MONGO_URL = os.environ.get('MONGOHQ')
+client = MongoClient(MONGO_URL)
+db = client.usacsSanta
+collection = db.santa
 app = Flask(__name__)
 app.config.from_pyfile("santa.cfg")
 
