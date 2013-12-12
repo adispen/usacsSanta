@@ -31,13 +31,13 @@
     <div class="container">
 
      <form class="form-signin" role="form" method="post" action="/posted">
-        <center><h2 class="form-signin-heading">Please enter your name and request.</h2></center>
+        <center><h2 class="form-signin-heading">Please enter your name and request($20 limit).</h2></center>
        <!-- <input type="text" class="form-control" placeholder="Name" required autofocus> 
 	   <input type="text" class="form-control" placeholder="Gift request" required> -->
 	   {{form.hidden_tag()}}
 	   {{form.name(type="text", class_="form-control", placeholder="Name", required=true, autofocus=true)}}
 	   {{form.email(type="text", class_="form-control", placeholder="Email address", required=true)}}
-	   {{form.gift(type="text", class_="form-control", placeholder="Gift ideas", required=true)}}
+	   {{form.gift(type="text", class_="form-control", placeholder="What are your interests?", required=true)}}
         <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
 		</form> 	
 
