@@ -11,7 +11,7 @@ class santaForm(Form):
 	gift = TextAreaField('gift', validators=[Required()])
 	email = TextField('email', validators=[Required()])
 
-MONGO_URL = os.environ.get('MONGOHQ')
+MONGO_URL = os.environ.get('MONGO_URL')
 client = MongoClient(MONGO_URL)
 db = client.usacsSanta
 collection = db.santa
